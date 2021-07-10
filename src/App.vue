@@ -5,8 +5,8 @@
 <button @click="addList">Add</button>
 <br><br>
 
-   <div v-for="item in mylist" :key="item">
-    {{item}}
+   <div v-for="(item,index) in mylist" :key="item">
+    {{index}}- {{item}}
    </div>
 
  </div>
