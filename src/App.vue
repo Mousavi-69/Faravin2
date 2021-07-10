@@ -27,6 +27,7 @@ export default {
     methods:{
 addList(){
 this.mylist.push(this.txt)
+this.txt = ""
 }
     }
 }
