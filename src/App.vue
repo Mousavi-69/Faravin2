@@ -1,16 +1,34 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+ <div class="contaner">
+   <input placeholder="متن را وارد کنید" type="text"  v-model="txt" >
+   <br><br>
+<button @click="addList">Add</button>
+<br><br>
+
+   <div v-for="item in mylist" :key="item">
+    {{item}}
+   </div>
+
+ </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+  },
+  data(){
+    return{
+      txt:"",
+    mylist:[]
+    }
+    },
+    methods:{
+addList(){
+this.mylist.push(this.txt)
+}
+    }
 }
 </script>
 
